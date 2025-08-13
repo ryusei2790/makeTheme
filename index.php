@@ -49,6 +49,18 @@ get_header();
         <p>あなたの「わくわくすること」を<br>私たちに教えてください。</p>
         </div>
 </section>
+<section id="service" class="scroll-point">
+    <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></h2>
+    <section class="service-area flex flex-wrap justify-between">
+    <figure class="img flipLeftTrigger"><img src="img/pict_02.jpg" alt=""></figure>
+    <div class="content flipLeftTrigger">
+        <div class="content-area">
+        <h3><span>Consulting</span>コンサルティング事業</h3>
+        <p>経営・システム・デジタルマーケティングの目線でのコンサルティングを行います。</p>
+        <div class="btn"><a href="#" class="btnlinestretches3"><span>Detail</span></a></div>
+        </div>
+    </div>
+</section>
 </main><!-- #main -->
 
 <?php
