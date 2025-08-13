@@ -14,8 +14,12 @@
 
 get_header();
 ?>
+<div id="top-main">
+<p class="top-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">HAPPY</span></span><br><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Company is</span></span><br><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Making Future</span></span></p>
+<!--/top-main--></div>
 
-	<main id="primary" class="site-main">
+<div id="container">
+<main id="main-area">
 
 		<?php
 		if ( have_posts() ) :

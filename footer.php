@@ -11,24 +11,27 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nomal' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'nomal' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nomal' ), 'nomal', '<a href="http://ryusei">ryusei</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+<footer id="footer">
+<!-- この下のメニューって直書きじゃダメなのかな -->
+<div class="openbtn"><span></span><span>Menu</span><span></span></div>
+<div id="g-nav">
+<div id="g-nav-list">
+        <?php 
+        wp_nav_menu(
+            array(
+                'theme_location' => 'footer',
+                'menu_id' => 'footer-menu',
+            )
+            );
+            ?>
+</div>
+</div> 
+    <p class="footer-logo"><?php wp_title(); ?></p>
+    <small>&copy; <?php wp_title(); ?></small>
+	<p id="page-top"><a href="#">Top</a></p>	
+</footer>
+<!--/wrapper--></div>
+   
 <?php wp_footer(); ?>
-
 </body>
 </html>
