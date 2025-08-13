@@ -24,26 +24,21 @@
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nomal' ); ?></a>
             <!-- ここから下の部分はjsだからクラス名はそのままだと思う -->
 <div id="splash">
-<div id="splash-logo"><div class="bgextend bgLRextend"><span class="bgappear"><?php wp_title(); ?></span></div></div>
+<div id="splash-logo"><div class="bgextend bgLRextend"><span class="bgappear">Happycome</span></div></div>
 <!--/splash--></div>
 <div class="splashbg"></div><!---画面遷移用-->
 
 <div id="wrapper">
 <header id="header">
-<h1><a href="#"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><?php wp_title(); ?></span></span></a></h1>
+<h1><a href="#"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Happycome</span></span></a></h1>
     
-
-        <?php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'menu-1',
-                'menu_id' => 'primary-menu',
-                'container' => 'nav',
-                // 'container_class' =>にほんとはするんだけどidでもやれるか試す。
-                'container_id' => 'pc-nav',
-                // ここでクラスを作る方法、spanを加える方法はちょっと後でクラスの作り方を学んでから
-            )
-            );
-            ?>
-  
+<nav id="pc-nav">
+        <ul>
+            <li><a href="#vision"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Vision</span></span></a></li>
+            <li><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></li>
+            <li><a href="#about"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About</span></span></a></li>
+            <li><a href="#faq"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Faq</span></span></a></li>
+            <li><a href="#contact"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span></a></li>
+        </ul>
+</nav>   
 </header>
