@@ -66,107 +66,98 @@ get_header();
     </div>
 </section>
 <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="img/pict_03.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo esc_url(get_post_meta(get_the_ID(), 'service_img_2', true)); ?>" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
-        <h3><span>Development</span>受託開発事業</h3>
-        <p>プロジェクト/プロダクトマネージメントの観点からのご支援を致します。</p>
-        <div class="btn"><a href="#" class="btnlinestretches3"><span>Detail</span></a></div>
+        <h3><span><?php echo esc_html(get_post_meta(get_the_ID(), 'service_title_2', true));?></span><?php echo esc_html(get_post_meta(get_the_ID(), 'service_subtitle_2', true));?></h3>
+    <p><?php echo nl2br(esc_html(get_post_meta(get_the_ID(), 'service_desc_2', true))); ?></p>
+        <div class="btn"><a href="<?php echo esc_url(get_post_meta(get_the_ID(), 'service_link_2', true)); ?>" class="btnlinestretches3"><span>Detail</span></a></div>
         </div>
     </div>
-    </section>
+</section>
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="img/pict_04.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo esc_url(get_post_meta(get_the_ID(), 'service_img_3', true)); ?>" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
-        <h3><span>Education</span>教育事業</h3>
-        <p>エンジニアやデザイナーの養成、新人研修・プログラミング研修などを行っています。</p>
-        <div class="btn"><a href="#" class="btnlinestretches3"><span>Detail</span></a></div>
+        <h3><span><?php echo esc_html(get_post_meta(get_the_ID(), 'service_title_3', true)); ?></span><?php echo esc_html(get_post_meta(get_the_ID(), 'service_subtitle_3', true)); ?></h3>
+    <p><?php echo nl2br(esc_html(get_post_meta(get_the_ID(), 'service_desc_3', true))); ?></p>
+        <div class="btn"><a href="<?php echo esc_url(get_post_meta(get_the_ID(), 'service_link_3', true)); ?>" class="btnlinestretches3"><span>Detail</span></a></div>
         </div>
     </div>
-    </section>
-	</section>
+</section>
+</section>
     
 <section id="about" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About</span></span></h2>
     <ul class="about-list fadeUpTrigger">
-        <li>
+    <?php if ($val = get_post_meta(get_the_ID(), 'about_company_name', true)) : ?>
+    <li>
         <dl>
-            <dt>会社名</dt><dd>ハピカム株式会社</dd>
+            <dt>会社名</dt>
+            <dd><?php echo esc_html($val); ?></dd>
         </dl>
-        </li>
-        <li>
+    </li>
+    <?php endif; ?>
+
+    <?php if ($val = get_post_meta(get_the_ID(), 'about_established', true)) : ?>
+    <li>
         <dl>
-            <dt>設立</dt><dd>2020年7月</dd>
+            <dt>設立</dt>
+            <dd><?php echo esc_html($val); ?></dd>
         </dl>
-        </li>
-        <li>
+    </li>
+    <?php endif; ?>
+
+    <?php if ($val = get_post_meta(get_the_ID(), 'about_capital', true)) : ?>
+    <li>
         <dl>
-            <dt>資本金</dt><dd>2000万円</dd>
+            <dt>資本金</dt>
+            <dd><?php echo esc_html($val); ?></dd>
         </dl>
-        </li>
-        <li>
+    </li>
+    <?php endif; ?>
+
+    <?php if ($val = get_post_meta(get_the_ID(), 'about_ceo', true)) : ?>
+    <li>
         <dl>
-            <dt>代表</dt><dd>久保田涼子</dd>
+            <dt>代表</dt>
+            <dd><?php echo esc_html($val); ?></dd>
         </dl>
-        </li>
-        <li>
+    </li>
+    <?php endif; ?>
+
+    <?php if ($val = get_post_meta(get_the_ID(), 'about_address', true)) : ?>
+    <li>
         <dl>
-            <dt>所在地</dt><dd>〒104-0000 東京都中央区1丁目1番1号</dd>
+            <dt>所在地</dt>
+            <dd><?php echo nl2br(esc_html($val)); ?></dd>
         </dl>
-        </li>
-        <li>
+    </li>
+    <?php endif; ?>
+
+    <?php if ($val = get_post_meta(get_the_ID(), 'about_tel', true)) : ?>
+    <li>
         <dl>
-            <dt>電話</dt><dd>03-1234-5678</dd>
+            <dt>電話</dt>
+            <dd><?php echo esc_html($val); ?></dd>
         </dl>
-        </li>
-        <li>
+    </li>
+    <?php endif; ?>
+
+    <?php if ($val = get_post_meta(get_the_ID(), 'about_clients', true)) : ?>
+    <li>
         <dl>
-            <dt>主な取引先</dt><dd>杉山商事<br>Y&amp;YCorporation<br>コテツ株式会社</dd>
+            <dt>主な取引先</dt>
+            <dd><?php echo nl2br(esc_html($val)); ?></dd>
         </dl>
-        </li>
-    </ul>
+    </li>
+    <?php endif; ?>
+</ul>
 </section>
 <div class="fadeUpTrigger"><div class="faq-bg"></div></div>
 <section id="faq" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">FAQ</span></span></h2>
-    <ul class="accordion-area">
-			<li class="fadeUpTrigger">
-					<section class="open">
-						<h3 class="title">お見積もりの目安を教えてください。</h3>
-						<div class="box">
-							<p>内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。</p>
-						</div>
-					</section>
-				</li>
-				<li class="fadeUpTrigger">
-					<section>
-						<h3 class="title">地方ですが発注は可能でしょうか</h3>
-						<div class="box">
-							<p>可能です。お気軽にご相談ください。</p>
-						</div>
-					</section>
-				</li>
-				<li class="fadeUpTrigger">
-					<section>
-						<h3 class="title">セミナーやイベントの出演を依頼したいのですが</h3>
-						<div class="box">
-							<p>お問い合わせフォームより日時や内容などをご記入いただきご相談ください。</p>
-						</div>
-					</section>
-					
-				</li>
-				<li class="fadeUpTrigger">
-					<section>
-						<h3 class="title">WEBメディアに記事を書いて頂くことは可能でしょうか？</h3>
-						<div class="box">
-							<p>ご相談内容によっては可能です。まずはお気軽にお問い合わせフォームよりご相談ください。</p>
-						</div>
-					</section>
-					
-				</li>
-
-			</ul>
+    
 </section>
 <section id="contact" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span></h2>
