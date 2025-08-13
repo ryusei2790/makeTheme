@@ -15,7 +15,7 @@
 get_header();
 ?>
 <div id="top-main">
-<p class="top-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">HAPPY</span></span><br><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Company is</span></span><br><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Making Future</span></span></p>
+<p class="top-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><?php wp_title(); ?></span></span></p>
 <!--/top-main--></div>
 
 <div id="container">
@@ -43,21 +43,25 @@ get_header();
         <div class="img flipLeftTrigger"></div>
         <div class="content flipLeftTrigger">
         <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Vision</span></span></h2>
-        <p class="vision-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">企業が笑顔だと未来は明るい<br>迅速な対応をモットーにしています</span></span></p>
-
-        <p>ハピカム株式会社は、<br>経営やシステムに関するコンサルティングや<br>プロジェクトマネージメントを行っています</p>
-        <p>あなたの「わくわくすること」を<br>私たちに教えてください。</p>
+        <p class="vision-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><?php echo esc_html(get_post_meta(get_the_ID(), 'vision_lead', true)); ?></span></span></p>
+		<p>
+			<?php echo nl2br(esc_html(get_post_meta(get_the_ID(), 'vision_text1', true))); ?>
+		</p>
+		<p>
+			<?php echo nl2br(esc_html(get_post_meta(get_the_ID(), 'vision_text2', true))); ?>
+		</p>
         </div>
 </section>
 <section id="service" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></h2>
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="img/pict_02.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo esc_url(get_post_meta(get_the_ID(), 'service_img_1', true)); ?>" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
-        <h3><span>Consulting</span>コンサルティング事業</h3>
-        <p>経営・システム・デジタルマーケティングの目線でのコンサルティングを行います。</p>
-        <div class="btn"><a href="#" class="btnlinestretches3"><span>Detail</span></a></div>
+        <h3><span><?php echo esc_html(get_post_meta(get_the_ID(), 'service_title_1', true)); ?></span><?php echo esc_html(get_post_meta(get_the_ID(), 'service_subtitle_1', true)); ?></h3>
+	<p><?php echo nl2br(esc_html(get_post_meta(get_the_ID(), 'service_desc_1', true))); ?></p>
+
+        <div class="btn"><a href="<?php echo esc_url(get_post_meta(get_the_ID(), 'service_link_1', true)); ?>" class="btnlinestretches3"><span>Detail</span></a></div>
         </div>
     </div>
 </section>
