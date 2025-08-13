@@ -157,8 +157,24 @@ get_header();
 <div class="fadeUpTrigger"><div class="faq-bg"></div></div>
 <section id="faq" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">FAQ</span></span></h2>
-    
-</section>
+    <ul class="accordion-area">
+		<?php for ($i = 1; $i <= 4; $i++) :
+		$title = get_post_meta(get_the_ID(), "faq_title_$i", true);
+		$content = get_post_meta(get_the_ID(), "faq_content_$i", true);
+		if ($title && $content) : ?>
+		<li class="fadeUpTrigger">
+			<section <?php if($i === 1) echo 'class="open"'; ?>>
+				<h3 class="title"><?php echo esc_html($title); ?></h3>
+				<div class="box">
+					<p><?php echo nl2br(esc_html($content)); ?></p>
+		</div>
+		</section>
+		</li>
+		<?php 
+		endif; 
+	endfor; ?>
+	</ul>
+	</section>
 <section id="contact" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span></h2>
     <form method="post" action="" enctype="multipart/form-data">
