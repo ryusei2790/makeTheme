@@ -20,41 +20,27 @@ get_header();
 
 <div id="container">
 <main id="main-area">
+<section id="topics">
+    <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Topics</span></span></h2>
+    <?php if ( have_posts() ) : ?>
+    <ul class="slider">
+        <?php while ( have_posts() ) : the_post(); ?>
+        <li>
+            <a href="<?php the_permalink(); ?>">
+                <time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
+                    <?php echo get_the_date( 'Y.m.d' ); ?>
+                </time>
+                <?php the_title(); ?>
+            </a>
+        </li>
+        <?php endwhile; ?>
+    </ul>
+    <?php else : ?>
+        <p>お知らせはありません。</p>
+<?php endif; ?>
+</section>
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_sidebar();
