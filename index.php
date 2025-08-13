@@ -164,6 +164,53 @@ get_header();
 
 			</ul>
 </section>
+<section id="contact" class="scroll-point">
+    <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span></h2>
+    <form method="post" action="" enctype="multipart/form-data">
+	<ul class="form-list fadeUpTrigger">
+
+<li>
+  <dl>
+    <dt><label for="division">会社名・部署名</label></dt>
+    <dd>[text* division id:division class:input-text size:60]</dd>
+  </dl>
+</li>
+
+<li>
+  <dl>
+    <dt><label for="name">ご担当者名</label></dt>
+    <dd>[text* name id:name class:input-text size:60]</dd>
+  </dl>
+</li>
+
+<li>
+  <dl>
+    <dt><label for="email">メールアドレス</label></dt>
+    <dd>[email* email id:email class:input-text size:60]</dd>
+  </dl>
+</li>
+
+<li>
+  <dl>
+    <dt><label for="tel">電話番号</label></dt>
+    <dd>[tel tel id:tel class:input-text size:60]</dd>
+  </dl>
+</li>
+
+<li>
+  <dl>
+    <dt><label for="msg">お問い合わせ内容</label></dt>
+    <dd>[textarea* message id:msg cols:50 rows:5]</dd>
+  </dl>
+</li>
+
+</ul>
+
+<div class="submit-btn fadeUpTrigger">[submit "確認"]</div>
+
+        </form>
+    
+</section>
 </main><!-- #main -->
 
 <?php
