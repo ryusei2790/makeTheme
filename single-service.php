@@ -17,8 +17,8 @@
             </div>
 
             <div class="back-btn">
-                <a href="<?php echo get_post_type_archive_link('service'); ?>">一覧表示</a>
-        </div>
+  <a href="<?php echo esc_url(home_url('/service')); ?>">一覧表示</a>
+</div>
         </section>
         <?php endwhile; endif; ?>
         </main>

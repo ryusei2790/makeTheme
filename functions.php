@@ -62,6 +62,14 @@ function nomal_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'nomal_assets' );
 
+function my_service_styles() {
+  if( is_singular('service') ) {
+      wp_enqueue_style('service-css', get_template_directory_uri() . '/assets/css/service.css');
+  }
+}
+add_action('wp_enqueue_scripts', 'my_service_styles');
+
+
 // ウィジェットエリア（任意：サイドバー）
 function nomal_widgets_init() {
   register_sidebar( [
