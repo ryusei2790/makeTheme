@@ -6,32 +6,37 @@
 <div id="container">
 
 <main id="main-area">
-<!-- <section id="topics">
-    <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Topics</span></span></h2>
-    <ul class="slider">
-    <li><a href="#"><time datetime="2021-11-01">2021.11.01</time>TV「アサカツデジ」で放送されました。</a></li>
-    <li><a href="#"><time datetime="2021-11-02">2021.11.02</time>杉山商事様でセミナーを行いました</a></li>
-    <li><a href="#"><time datetime="2021-11-03">2021.11.03</time>中途採用情報</a></li>
-    </ul>
-</section> -->
+    
 <section id="topics">
-    <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Topics</span></span></h2>
-    <?php if ( have_posts() ) : ?>
-    <ul class="slider">
-        <?php while ( have_posts() ) : the_post(); ?>
+<h2>
+        <span class="bgextend bgRextendTrigger">
+            <span class="bgappearTrigger">Topics</span>
+</span>
+</h2>
+<ul class="slider">
+    <?php
+    $args = array(
+        'posts_per_page' => 3,
+        'post_type' => 'post', 
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+    $recent_posts = get_posts($args);
+    foreach ($recent_posts as $post) :
+        setup_postdata($post); ?>
         <li>
             <a href="<?php the_permalink(); ?>">
-                <time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
-                    <?php echo get_the_date( 'Y.m.d' ); ?>
-                </time>
-                <?php the_title(); ?>
-            </a>
-        </li>
-        <?php endwhile; ?>
+                <time datetime="<?php echo get_the_date('c'); ?>">
+                    <?php echo get_the_date('Y.m.d'); ?>
+    </time>
+    <?php the_title(); ?>
+    </a>
+    </li>
+    <?php
+    endforeach;
+    wp_reset_postdata();
+    ?>
     </ul>
-    <?php else : ?>
-        <p>お知らせはありません。</p>
-<?php endif; ?>
 </section>
 
 <section id="vision" class="scroll-point">
@@ -45,10 +50,10 @@
         </div>
 </section>
     
-<!-- <section id="service" class="scroll-point">
+<section id="service" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></h2>
-    <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="img/pict_02.jpg" alt=""></figure>
+    <!-- <section class="service-area flex flex-wrap justify-between">
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_02.jpg" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>Consulting</span>コンサルティング事業</h3>
@@ -59,7 +64,7 @@
     </section>
  
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="img/pict_03.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_03.jpg" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>Development</span>受託開発事業</h3>
@@ -70,7 +75,7 @@
     </section>
     
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="im >g/pict_04.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_04.jpg" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>Education</span>教育事業</h3>
@@ -78,9 +83,43 @@
         <div class="btn"><a href="#" class="btnlinestretches3"><span>Detail</span></a></div>
         </div>
     </div>
-    </section>
+    </section> -->
+    <?php
+    $args = array(
+        'post_type' => 'service',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
+    );
+    $service_posts = get_posts($args);
+
+    foreach ($service_posts as $post) : 
+        setup_postdata($post); ?>
+        <section class="service-area">
+            <?php if (has_post_thumbnail()) : ?>
+                <figure class="img flipLeftTrigger">
+                <?php 
+                if ( has_post_thumbnail() ) { 
+                    the_post_thumbnail('full'); // 'full' はフルサイズ画像
+                } else {
+                    // 画像が設定されていない場合の代替画像
+                    // echo '<img src="' . get_template_directory_uri() . '/assets/img/pict_02.jpg" alt="代替画像">';
+                }
+                ?>
+            </figure>
+            <?php endif; ?>
+            <div class="content flipLeftTrigger">
+                <div class="content-area">
+                    <h3><span><?php the_title(); ?></span></h3>
+                    <p><?php the_excerpt(); ?></p>
+                    <div class="btn"><a href="<?php the_permalink(); ?>" class="btnlinestretches3"><span>Detail</span></a></div>
+            </div>
+            </div>
+            </section>
+            <?php endforeach;
+            wp_reset_postdata(); ?>
     
-</section> -->
+</section>
     
 <section id="about" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About</span></span></h2>

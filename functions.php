@@ -54,12 +54,6 @@ function nomal_assets() {
       [],
       null
   );
-	// wp_enqueue_style( 'nomal-reset', get_theme_file_uri( '/assets/css/reset.css' ), [], '1.0' );
-  //   wp_enqueue_style( 'mybiz-layout', get_theme_file_uri( '/assets/css/layout.css' ), ['mybiz-reset'], '1.0' );
-  //   wp_enqueue_style( 'mybiz-parts', get_theme_file_uri( '/assets/css/parts.css' ), ['mybiz-layout'], '1.0' );
-  //   wp_enqueue_style( 'mybiz-style-rtl', get_theme_file_uri( '/assets/css/style-rtl.css' ), ['mybiz-parts'], '1.0' );
-  //   wp_enqueue_style( 'mybiz-style-main', get_theme_file_uri( '/assets/css/style.css' ), ['mybiz-style-rtl'], '1.0' );
-	// wp_enqueue_script( 'mybiz-main', get_theme_file_uri( '/assets/js/main.js' ), [], '1.0', true );
   wp_enqueue_style( 'nomal-reset', get_theme_file_uri( '/assets/css/reset.css' ), [], '1.0' );
   wp_enqueue_style( 'nomal-layout', get_theme_file_uri( '/assets/css/layout.css' ), ['nomal-reset'], '1.0' );
   wp_enqueue_style( 'nomal-parts', get_theme_file_uri( '/assets/css/parts.css' ), ['nomal-layout'], '1.0' );
@@ -81,21 +75,48 @@ function nomal_widgets_init() {
 }
 add_action( 'widgets_init', 'nomal_widgets_init' );
 
-// function my_theme_scripts() {
-// 	wp_enqueue_script('jquery');
-// 	wp_enqueue_script(
-// 		'custom-script',
-// 		get_template_directory_uri() . '/js/main.js',
-// 		array('jquery'),
-// 		'1.0',
-// 		true
-// 	);
+function aniumaservice_register_post_type() {
+  $labels = array(
+    'name' => 'サービス',
+    'singular_name' => 'サービス',
+    'add_new' => '新規追加',
+    'add_new_item' => '新しいサービスを追加',
+    'edit_item' => 'サービスを編集',
+    'new_item' => '新しいサービス',
+    'view_item' => 'サービスを表示',
+);
 
-// 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-// 	wp_enqueue_style('style-rtf', get_template_directory_uri() . '/css/style-rtf.css', array(), '1.0', 'all');
-//     wp_enqueue_style('reset', get_template_directory_uri() . '/css/reset.css', array(), '1.0', 'all');
-//     wp_enqueue_style('parts', get_template_directory_uri() . '/css/parts.css', array(), '1.0', 'all');
-//     wp_enqueue_style('layout', get_template_directory_uri() . '/css/layout.css', array(), '1.0', 'all');
-// }
+$args = array(
+  'labels' => $labels,
+  'public' => true,
+  'has_archive' => false,
+  'menu_icon' => 'dashicons-hammer',
+  'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+  'show_in_rest' => true, // Gutenberg対応
+);
 
-// add_action('wp_enqueue_scripts', 'my_theme_scripts');
+    register_post_type('service', $args);
+}
+add_action('init', 'aniumaservice_register_post_type');
+
+function aniumaservice_register_taxonomy() {
+  $labels = array(
+    'name' => 'サービスカテゴリ',
+    'singular_name' => 'サービスカテゴリ',
+    'search_items' => 'サービスカテゴリを検索',
+    'all_items' => '全てのサービスカテゴリ',
+    'edit_item' => 'サービスカテゴリを編集',
+    'add_new_item' => '新しいサービスカテゴリを追加',
+    'menu_name' => 'サービスカテゴリ',
+);
+
+$args = array(
+  'labels' => $labels,
+  'hierarchical' => true,
+  'show_ui' => true,
+  'show_in_rest' => true,
+);
+
+register_taxonomy('service_category', 'service', $args);
+}
+add_action('init', 'aniumaservice_register_taxonomy');

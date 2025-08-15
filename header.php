@@ -21,24 +21,24 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nomal' ); ?></a>
-            <!-- ここから下の部分はjsだからクラス名はそのままだと思う -->
+    <a class="skip-link screen-reader-text" href="/"><?php esc_html_e( 'Skip to content', 'nomal' ); ?></a>
+            
 <div id="splash">
 <div id="splash-logo"><div class="bgextend bgLRextend"><span class="bgappear">Happycome</span></div></div>
-<!--/splash--></div>
-<div class="splashbg"></div><!---画面遷移用-->
+</div>
+<div class="splashbg"></div>
 
 <div id="wrapper">
 <header id="header">
-<h1><a href="#"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Happycome</span></span></a></h1>
+<h1><a href="<?php echo home_url("/"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Happycome</span></span></a></h1>
     
 <nav id="pc-nav">
         <ul>
-            <li><a href="#vision"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Vision</span></span></a></li>
+            <li><a href="<?php echo home_url("/vision"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Vision</span></span></a></li>
             <li><a href="<?php echo home_url("/service"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></a></li>
-            <li><a href="#about"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About</span></span></a></li>
-            <li><a href="#faq"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Faq</span></span></a></li>
-            <li><a href="#contact"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span></a></li>
+            <li><a href="<?php echo home_url("/about"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About</span></span></a></li>
+            <li><a href="<?php echo home_url("/faq"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Faq</span></span></a></li>
+            <li><a href="<?php echo home_url("/contact"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span></a></li>
         </ul>
 </nav>   
 </header>
