@@ -69,6 +69,13 @@ function my_service_styles() {
 }
 add_action('wp_enqueue_scripts', 'my_service_styles');
 
+function my_vision_styles() {
+  if( is_singular('vision') ) {
+      wp_enqueue_style('vision-css', get_template_directory_uri() . '/assets/css/vision.css');
+  }
+}
+add_action('wp_enqueue_scripts', 'my_vision_styles');
+
 
 // ウィジェットエリア（任意：サイドバー）
 function nomal_widgets_init() {

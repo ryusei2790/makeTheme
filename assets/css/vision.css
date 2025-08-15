@@ -1,0 +1,91 @@
+/* Visionセクション */
+#vision {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    background-color: #f9f9f9;
+    gap: 40px;
+}
+
+#vision .img {
+    flex: 1;
+    height: 300px;
+    background-image: url('/assets/img/vision.jpg'); /* ここに画像パス */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+#vision .content {
+    flex: 1;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+#vision h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#vision h2 span.bgextend {
+    display: inline-block;
+    overflow: hidden;
+}
+
+#vision h2 span.bgappearTrigger {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.8s ease-out;
+}
+
+/* Visionリード文 */
+#vision .vision-lead {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* 通常本文 */
+#vision p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* スクロール時アニメーション用 */
+.flipLeftTrigger.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.bgappearTrigger.show {
+    transform: translateY(0);
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+    #vision {
+        flex-direction: column;
+        padding: 50px 5%;
+        gap: 30px;
+    }
+
+    #vision .img, #vision .content {
+        transform: translateX(0);
+    }
+
+    #vision h2 {
+        font-size: 1.8rem;
+    }
+
+    #vision .vision-lead {
+        font-size: 1.1rem;
+    }
+}
