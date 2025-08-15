@@ -10,31 +10,32 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
+	<main id="main-content">
 		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'nomal' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'nomal' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+		if (have_posts()) :
+			while (have_posts()) : the_post();
+			?>
+			<article <?php post_class();
+			?>>
+			<h1><?php the_title(); ?></h1>
+			<div class="post-meta">
+				<time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date(); ?></time>
+				<span class="category"><?php the_category(', '); ?></span>
+		</div>
+		<div class="post-content">
+			<?php the_content(); ?>
+		</div>
+		<div class="post-tags">
+			<?php the_tags(); ?>
+		</div>
+		<?php comments_template(); ?>
+		</article>
+		<?php 
+		endwhile;
+	endif;
+	?>
+	</main>
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

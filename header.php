@@ -35,7 +35,7 @@
 <nav id="pc-nav">
         <ul>
             <li><a href="#vision"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Vision</span></span></a></li>
-            <li><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></li>
+            <li><a href="<?php echo home_url("/service"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></a></li>
             <li><a href="#about"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About</span></span></a></li>
             <li><a href="#faq"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Faq</span></span></a></li>
             <li><a href="#contact"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span></a></li>

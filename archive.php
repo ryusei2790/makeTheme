@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<!-- <main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -19,18 +19,12 @@ get_header();
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
@@ -43,6 +37,18 @@ get_header();
 
 		endif;
 		?>
+
+	</main>#main -->
+	<main id="primary" class="site-main">
+
+	<div class="img flipLeftTrigger"></div>
+        <div class="content flipLeftTrigger">
+        <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Vision</span></span></h2>
+        <p class="vision-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">企業が笑顔だと未来は明るい<br>迅速な対応をモットーにしています</span></span></p>
+
+        <p>ハピカム株式会社は、<br>経営やシステムに関するコンサルティングや<br>プロジェクトマネージメントを行っています</p>
+        <p>あなたの「わくわくすること」を<br>私たちに教えてください。</p>
+        </div>
 
 	</main><!-- #main -->
 
