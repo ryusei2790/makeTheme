@@ -10,47 +10,49 @@
 get_header();
 ?>
 
-	<!-- <main id="primary" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main>#main -->
 	<main id="primary" class="site-main">
 
-	<div class="img flipLeftTrigger"></div>
-        <div class="content flipLeftTrigger">
-        <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Vision</span></span></h2>
-        <p class="vision-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">企業が笑顔だと未来は明るい<br>迅速な対応をモットーにしています</span></span></p>
+	<?php if ( have-posts() ) : ?>
 
-        <p>ハピカム株式会社は、<br>経営やシステムに関するコンサルティングや<br>プロジェクトマネージメントを行っています</p>
-        <p>あなたの「わくわくすること」を<br>私たちに教えてください。</p>
-        </div>
+		<!--アーカイブページのタイトルと説明-->
+		<header class="page-header">
+			<?php 
+			the-archive_title( '<h1 class="page-title">', '</h1>' );
+			the_archive_description( '<div class="archive-description">', '</div>' );
+			?>
+			</header>
 
-	</main><!-- #main -->
+			<!--記事ループ-->
+			<?php while ( have_posts() ) : the_post(); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<h2 class="entry-title">
+					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	</h2>
+
+	<div class="entry-meta">
+		<span class="post-date"><?php echo get_the_date(); ?></span>
+		<span class="post-author"><?php the_author(); ?></span>
+	</div>
+
+	<div class="entry-excerpt">
+		<?php the_excerpt(); ?>
+	</div>
+	</article>
+	<?php endwhile; ?>
+
+	<!--ページネーション　実装知らない-->
+	<div class="pagination">
+		<?php the_posts_pagination(); ?>
+	</div>
+
+	<?php else : ?>
+		<p>記事がありません</p>
+		<?php endif; ?>
+
+	</main>
+	
+
+		
 
 <?php
 get_sidebar();
