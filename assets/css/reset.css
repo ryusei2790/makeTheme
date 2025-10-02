@@ -99,7 +99,9 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace; /* Specify the font family of code elements */
+  font-family: "Allura", "游ゴシック体", YuGothic,
+               "游ゴシック Medium", "Yu Gothic Medium",
+               "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 
 b,
@@ -113,7 +115,7 @@ dfn {
 
 /* Address styling not present in IE 8/9 */
 mark {
-  background-color: #ff0;
+  background-color: rgb(225, 0, 255);
   color: #000;
 }
 

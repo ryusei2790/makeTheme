@@ -101,7 +101,9 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-	font-family: monospace, monospace;
+	font-family: "Allura", "游ゴシック体", YuGothic,
+               "游ゴシック Medium", "Yu Gothic Medium",
+               "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 	font-size: 1em;
 }
 
@@ -140,7 +142,9 @@ strong {
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
+	font-family: "Allura", "游ゴシック体", YuGothic,
+               "游ゴシック Medium", "Yu Gothic Medium",
+               "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 	font-size: 1em;
 }
 
@@ -436,7 +440,9 @@ code,
 kbd,
 tt,
 var {
-	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: "Allura", "游ゴシック体", YuGothic,
+               "游ゴシック Medium", "Yu Gothic Medium",
+               "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 
 abbr,
@@ -447,7 +453,7 @@ acronym {
 
 mark,
 ins {
-	background: #fff9c0;
+	background: #7df0ff;
 	text-decoration: none;
 }
 

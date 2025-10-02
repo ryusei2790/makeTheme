@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="top-main">
-<p class="top-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">HAPPY</span></span><br><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Company is</span></span><br><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Making Future</span></span></p>
+<p class="top-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Zenovith</span></span><br><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">is</span></span><br><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Making Future</span></span></p>
 <!--/top-main--></div>
 
 <div id="container">
@@ -45,19 +45,19 @@
         <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Vision</span></span></h2>
         <p class="vision-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">企業が笑顔だと未来は明るい<br>迅速な対応をモットーにしています</span></span></p>
 
-        <p>ハピカム株式会社は、<br>経営やシステムに関するコンサルティングや<br>プロジェクトマネージメントを行っています</p>
-        <p>あなたの「わくわくすること」を<br>私たちに教えてください。</p>
+        <p>Zenovithは、<br>社会に貢献する事業設立から<br>テクノロジーを通じて</p>
+        <p>あなたの<br>未来を創造します。</p>
         </div>
 </section>
     
 <section id="service" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></h2>
-    <!-- <section class="service-area flex flex-wrap justify-between">
+    <section class="service-area flex flex-wrap justify-between">
     <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_02.jpg" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
-        <h3><span>Consulting</span>コンサルティング事業</h3>
-        <p>経営・システム・デジタルマーケティングの目線でのコンサルティングを行います。</p>
+        <h3><span>コムキャリー</span></h3>
+        <p>これからの社会を創造する社会システムの構築を目指します</p>
         <div class="btn"><a href="#" class="btnlinestretches3"><span>Detail</span></a></div>
         </div>
     </div>
@@ -67,23 +67,23 @@
     <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_03.jpg" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
-        <h3><span>Development</span>受託開発事業</h3>
-        <p>プロジェクト/プロダクトマネージメントの観点からのご支援を致します。</p>
+        <h3><span>Zentry</span>採用プラットフォーム運営</h3>
+        <p>一方的なマーケティングから双方の満足を追求するマーケティングを行います</p>
         <div class="btn"><a href="#" class="btnlinestretches3"><span>Detail</span></a></div>
         </div>
     </div>
     </section>
     
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_04.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_04.jpg" alt="4"></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
-        <h3><span>Education</span>教育事業</h3>
-        <p>エンジニアやデザイナーの養成、新人研修・プログラミング研修などを行っています。</p>
+        <h3><span>AI</span>導入推進</h3>
+        <p>AIシステム開発、コンサルを通じて人の働く価値を創出します</p>
         <div class="btn"><a href="#" class="btnlinestretches3"><span>Detail</span></a></div>
         </div>
     </div>
-    </section> -->
+    </section>
     <?php
     $args = array(
         'post_type' => 'service',
@@ -99,13 +99,13 @@
             <?php if (has_post_thumbnail()) : ?>
                 <figure class="img flipLeftTrigger">
                 <?php 
-                if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail('full'); // 'full' はフルサイズ画像
-                } else {
-                    // 画像が設定されていない場合の代替画像
-                    // echo '<img src="' . get_template_directory_uri() . '/assets/img/pict_02.jpg" alt="代替画像">';
-                }
-                ?>
+                    if ( has_post_thumbnail() ) { 
+                        echo get_the_post_thumbnail( get_the_ID(), 'full' );
+                    } else {
+                        echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/pict_02.jpg' ) . '" alt="代替画像">';
+                    }
+                    ?>
+
             </figure>
             <?php endif; ?>
             <div class="content flipLeftTrigger">
@@ -126,37 +126,37 @@
     <ul class="about-list fadeUpTrigger">
         <li>
         <dl>
-            <dt>会社名</dt><dd>ハピカム株式会社</dd>
+            <dt>会社名</dt><dd>Zenovith</dd>
         </dl>
         </li>
         <li>
         <dl>
-            <dt>設立</dt><dd>2020年7月</dd>
+            <dt>設立</dt><dd>2025年3月</dd>
         </dl>
         </li>
         <li>
         <dl>
-            <dt>資本金</dt><dd>2000万円</dd>
+            <dt>資本金</dt><dd>50万円</dd>
         </dl>
         </li>
         <li>
         <dl>
-            <dt>代表</dt><dd>久保田涼子</dd>
+            <dt>代表</dt><dd>久保昌幹</dd>
         </dl>
         </li>
         <li>
         <dl>
-            <dt>所在地</dt><dd>〒104-0000 東京都中央区1丁目1番1号</dd>
+            <dt>所在地</dt><dd>東京都渋谷区渋谷</dd>
         </dl>
         </li>
         <li>
         <dl>
-            <dt>電話</dt><dd>03-1234-5678</dd>
+            <dt>電話</dt><dd>0</dd>
         </dl>
         </li>
         <li>
         <dl>
-            <dt>主な取引先</dt><dd>杉山商事<br>Y&amp;YCorporation<br>コテツ株式会社</dd>
+            <dt></dt><dd><br><br></dd>
         </dl>
         </li>
     </ul>

@@ -45,7 +45,7 @@ body.appear .splashbg{
     top: 0;
 	left: 0;
     transform: scaleY(0);
-    background-color: #eb6100;/*伸びる背景色の設定*/
+    background-color: #50e2f0;/*伸びる背景色の設定*/
 	animation-name:PageAnime;
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;
@@ -107,7 +107,7 @@ body.appear #wrapper{
 	bottom:-120%;
 	width:100%;
     height: 100vh;/*ナビの高さ*/
-	background:#eb6100;
+	background:#17f2fe;
     /*動き*/
 	transition: all 0.6s;
 }
@@ -273,7 +273,7 @@ body.appear #wrapper{
 
 #pc-nav li.current a,
 #pc-nav li a:hover{
-	color:#eb6100;	
+	color:#50e2f0;	
 }
 
 /*===========================================================*/
@@ -568,7 +568,7 @@ body.appear #wrapper{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #eb6100;/*伸びる背景色の設定*/
+    background-color: #50e2f0;/*伸びる背景色の設定*/
 }
 @keyframes bgLRextendAnime{
 	0% {

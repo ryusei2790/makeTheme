@@ -1,8 +1,11 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 /* レイアウトのためのCSS */
 
 body{
-    font-family:"游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-family:"Allura", "游ゴシック体", YuGothic,
+               "游ゴシック Medium", "Yu Gothic Medium",
+               "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 	color: #333;
 	font-size:1rem;
 	line-height:1.85;
@@ -48,7 +51,9 @@ h3 span,
 #pc-nav,
 .openbtn,
 #footer{
-    font-family: 'Lato', sans-serif;
+    font-family: "Allura", "游ゴシック体", YuGothic,
+               "游ゴシック Medium", "Yu Gothic Medium",
+               "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
     letter-spacing: 0.1em;
 }
 
@@ -58,7 +63,7 @@ h3 span,
     font-size: 1.2rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #eb6100;
+    color: #50e2f0;
 }
 
 /* g-nav */
@@ -104,7 +109,7 @@ h1{
 
 
 h1 a{
-    color:#eb6100;
+    color:#50e2f0;
 }
 
 h2{
@@ -201,7 +206,7 @@ h2{
 #vision .img{
     width:40%;
     min-height: 590px;
-    background:url("../img/pict_01.jpg") no-repeat center;
+    background:url("<?php echo get_template_directory_uri(); ?>/assets/img/pict_01.jpg>") no-repeat center;
     background-size: cover;
 }
 
@@ -224,7 +229,7 @@ h2{
 }
 
 #vision h2{
-    color:#eb6100;
+    color:#50e2f0;
     margin:0 0 30px 0;
 }
 
@@ -235,7 +240,7 @@ h2{
 
 #vision .vision-lead{
     position: relative;
-    color:#eb6100;
+    color:#50e2f0;
     font-size:1.3rem;
     font-weight: bold;
     margin: 0 0 90px 0;
@@ -397,7 +402,7 @@ h2{
 
 #about h2{
     text-align: center;
-    color:#eb6100;
+    color:#50e2f0;
     margin:0 0 100px 0;
 }
 
@@ -459,7 +464,7 @@ h2{
 .faq-bg{
     position: relative;
     height: 55vh;
-    background:url("../img/pict_05.jpg") no-repeat center;
+    background:url("<?php echo get_template_directory_uri(); ?>/assets/img/pict_05.jpg>") no-repeat center;
     background-size:cover;
     margin: 0 0 200px 25%;
 }
@@ -511,7 +516,7 @@ h2{
 #contact h2{
     text-align: center;
     margin:0 0 100px 0;
-    color: #eb6101;
+    color: #50e2f0;
 }
 
 @media screen and (max-width:550px) {

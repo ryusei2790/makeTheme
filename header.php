@@ -24,13 +24,13 @@
     <a class="skip-link screen-reader-text" href="/"><?php esc_html_e( 'Skip to content', 'nomal' ); ?></a>
             
 <div id="splash">
-<div id="splash-logo"><div class="bgextend bgLRextend"><span class="bgappear">Happycome</span></div></div>
+<div id="splash-logo"><div class="bgextend bgLRextend"><span class="bgappear"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/main.png" alt="">Zenovith</span></div></div>
 </div>
 <div class="splashbg"></div>
 
 <div id="wrapper">
 <header id="header">
-<h1><a href="<?php echo home_url("/"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Happycome</span></span></a></h1>
+<h1><a href="<?php echo home_url("/"); ?>"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Zenovith</span></span></a></h1>
     
 <nav id="pc-nav">
         <ul>
