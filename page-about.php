@@ -10,7 +10,7 @@ get_header();
     <ul class="about-list fadeUpTrigger">
         <li>
         <dl>
-            <dt>会社名</dt><dd>ハピカム株式会社</dd>
+            <dt>会社名</dt><dd>Zenovith</dd>
         </dl>
         </li>
         <li>

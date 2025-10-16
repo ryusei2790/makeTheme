@@ -53,7 +53,7 @@
 <section id="service" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></h2>
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_02.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_02.jpg" alt="代替画像"></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>コムキャリー</span></h3>
@@ -64,7 +64,7 @@
     </section>
  
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_03.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_03.jpg" alt="代替画像"></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>Zentry</span>採用プラットフォーム運営</h3>
@@ -75,7 +75,7 @@
     </section>
     
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_04.jpg" alt="4"></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_04.jpg" alt="代替画像"></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>AI</span>導入推進</h3>
@@ -102,7 +102,7 @@
                     if ( has_post_thumbnail() ) { 
                         echo get_the_post_thumbnail( get_the_ID(), 'full' );
                     } else {
-                        echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/pict_02.jpg' ) . '" alt="代替画像">';
+                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_04.jpg" alt="代替画像">';
                     }
                     ?>
 

@@ -23,18 +23,22 @@ get_header();
     foreach ($service_posts as $post) : 
         setup_postdata($post); ?>
         <section class="service-area">
-            <?php if (has_post_thumbnail()) : ?>
+        <?php if (has_post_thumbnail()) : ?>
                 <figure class="img flipLeftTrigger">
-                <?php 
-                if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail(''); // 'full' はフルサイズ画像
-                } else {
-                    // 画像が設定されていない場合の代替画像
-                    // echo '<img src="' . get_template_directory_uri() . '/assets/img/pict_02.jpg" alt="代替画像">';
-                }
-                ?>
-            </figure>
+                    <?php 
+                    if ( has_post_thumbnail() ) { 
+                        // 投稿サムネイルを表示
+                        the_post_thumbnail('full'); // fullサイズ
+                    } else {
+                        // サムネイルがない場合の代替画像
+                        ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_02.jpg" alt="代替画像">
+                        <?php
+                    }
+                    ?>
+                </figure>
             <?php endif; ?>
+
             <div class="content flipLeftTrigger">
                 <div class="content-area">
                     <h3><span><?php the_title(); ?></span></h3>

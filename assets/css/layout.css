@@ -206,7 +206,7 @@ h2{
 #vision .img{
     width:40%;
     min-height: 590px;
-    background:url("<?php echo get_template_directory_uri(); ?>/assets/img/pict_01.jpg>") no-repeat center;
+    background:url("<?php echo get_template_directory_uri(); ?>/assets/img/pict_01.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -464,7 +464,7 @@ h2{
 .faq-bg{
     position: relative;
     height: 55vh;
-    background:url("<?php echo get_template_directory_uri(); ?>/assets/img/pict_05.jpg>") no-repeat center;
+    background: url("<?php echo get_template_directory_uri(); ?>/assets/img/pict_05.jpg") no-repeat center;
     background-size:cover;
     margin: 0 0 200px 25%;
 }
@@ -604,6 +604,102 @@ h2{
     width:100%;
 }
 	
+}
+
+/* faq-form */
+
+#faq-form{
+    width: 96%;
+    max-width: 900px;
+    margin: 50px auto 30px;
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+#faq-form input[type='text']{
+    flex: 1;
+    border: 1px solid #666;
+    background: #fff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@media screen and (max-width:768px) {
+    #faq-form input[type='text']{
+        font-size: 0.9rem;
+    }
+}
+
+#faq-form button[type='submit']{
+    border: 2px solid #333;
+    background: #fff;
+    color: #333;
+    padding: 10px 30px;
+    min-width: 100px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+#faq-form button[type='submit']:hover{
+    background: #333;
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    #faq-form button[type='submit']{
+        font-size: 0.9rem;
+        min-width: 80px;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    #faq-form{
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #faq-form button[type='submit']{
+        width: 100%;
+    }
+}
+
+#faq-result{
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+#faq-result .result-item{
+    border: 1px solid #ccc;
+    background: #f3f3f3;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+#faq-result .result-item h4{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+#faq-result .result-item p{
+    margin: 0;
+    line-height: 1.85;
+}
+
+@media screen and (max-width:768px) {
+    #faq-result .result-item h4{
+        font-size: 0.9rem;
+    }
 }
 
 /* footer */

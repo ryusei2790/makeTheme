@@ -44,6 +44,11 @@ get_header();
 				</li>
 
 			</ul>
+			<form id="faq-form">
+				<input type="text" id="faq-query" placeholder="質問を入力..." required>
+				<button type="submit">検索</button>
+			</form>
+			<div id="faq-result"></div>
 </section>
 
 <?php get_footer(); ?>
