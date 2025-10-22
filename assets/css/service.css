@@ -1,116 +1,261 @@
 /* サービス詳細ページ全体 */
 .service-detail {
-    max-width: 900px;
-    margin: 0 auto 100px auto;
-    padding: 60px 20px;
-    font-family: "Allura", "游ゴシック体", YuGothic,
-               "游ゴシック Medium", "Yu Gothic Medium",
-               "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
-    color: #333;
-    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px; /* よりモダンな間隔 */
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+                 "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    color: #2d3436; /* やや柔らかいダークカラー */
+    line-height: 1.7; /* 読みやすさ向上 */
+    background: linear-gradient(135deg, #f6f9fc 0%, #dfe6f5 100%); /* 背景をより滑らかに */
+    min-height: 100vh;
+    box-sizing: border-box; /* ボックスモデルの一貫性 */
 }
 
 /* メイン見出し */
 .service-detail h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
+    font-size: 2.75rem; /* やや大きめに */
     text-align: center;
-    color: #50e2f0;
-    margin-bottom: 60px;
+    color: #2d3436;
+    margin-bottom: 48px;
+    position: relative;
+    padding-bottom: 16px;
+    font-weight: 700; /* 強調 */
+}
+.service-detail h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px; /* 少し長めに */
+    height: 4px;
+    background: linear-gradient(90deg, #55efc4, #00cec9); /* より鮮やかなグラデーション */
+    border-radius: 2px; /* 角を丸く */
 }
 
-/* 画像 */
+/* 画像セクション */
 .service-detail .service-img {
     width: 100%;
-    max-height: 500px;
+    max-height: 450px; /* 少し大きめに */
     overflow: hidden;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
+    border-radius: 12px; /* 角をやや小さく */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 影を軽量化 */
+    position: relative;
+}
+.service-detail .service-img::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* ショートハンドで簡潔に */
+    background: linear-gradient(45deg, rgba(85,239,196,0.15), rgba(0,206,201,0.15)); /* グラデーションを更新 */
+    z-index: 1;
 }
 .service-detail .service-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 8px;
+    transition: transform 0.4s ease-out; /* トランジションを滑らかに */
+}
+.service-detail .service-img:hover img {
+    transform: scale(1.03); /* 拡大率を控えめに */
 }
 
-/* 本文 */
+/* 本文コンテナ */
 .service-detail .service-content {
-    background: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    padding: 40px;
-    font-size: 1rem;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* 影を軽量化 */
+    padding: 40px; /* 少しコンパクトに */
+    font-size: 1.05rem; /* 読みやすさ向上 */
     line-height: 1.9;
-    border-radius: 8px;
+    border-radius: 16px;
+    position: relative;
+}
+.service-detail .service-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #55efc4, #00cec9); /* グラデーションを統一 */
 }
 
 /* セクション見出し */
 .service-detail .service-content h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 40px 0 20px 0;
-    color: #222;
-    border-left: 4px solid #50e2f0;
-    padding-left: 12px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    color: #2d3436;
+    position: relative;
+    padding-left: 24px;
+}
+.service-detail .service-content h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 28px;
+    background: linear-gradient(180deg, #55efc4, #00cec9);
+    border-radius: 3px;
 }
 
 /* 小見出し */
 .service-detail .service-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 32px 0 16px;
+    color: #2d3436;
+    padding-left: 20px;
+    position: relative;
+}
+.service-detail .service-content h3::before {
+    content: '›'; /* よりモダンなアイコン */
+    position: absolute;
+    left: 0;
+    color: #55efc4;
+    font-size: 1rem;
     font-weight: bold;
-    margin: 30px 0 10px 0;
-    color: #444;
 }
 
 /* 段落 */
 .service-detail .service-content p {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+    text-align: justify;
+    letter-spacing: 0.4px;
+}
+.service-detail .service-content p:first-of-type {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #2d3436;
+    margin-bottom: 32px;
 }
 
 /* 「一覧に戻る」ボタン */
 .service-detail .back-btn {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 48px;
+    padding: 16px 0;
 }
 .service-detail .back-btn a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    border: 2px solid #50e2f0;
-    padding: 10px 30px;
-    color: #50e2f0;
+    background: linear-gradient(135deg, #55efc4, #00cec9); /* グラデーションを統一 */
+    color: #fff;
+    padding: 12px 36px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
-    font-weight: bold;
-    transition: all 0.3s;
-    border-radius: 5px;
+    transition: all 0.3s ease;
+    border-radius: 40px; /* 角をやや小さく */
+    box-shadow: 0 6px 20px rgba(85, 239, 196, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.service-detail .back-btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.4s ease;
 }
 .service-detail .back-btn a:hover {
-    background: #50e2f0;
-    color: #fff;
+    transform: translateY(-2px); /* 動きを控えめに */
+    box-shadow: 0 8px 25px rgba(85, 239, 196, 0.4);
+}
+.service-detail .back-btn a:hover::before {
+    left: 100%;
 }
 
 /* レスポンシブ対応 */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .service-detail {
-        padding: 40px 15px;
+        padding: 32px 16px;
     }
     .service-detail h1 {
-        font-size: 1.7rem;
-        margin-bottom: 40px;
+        font-size: 2.25rem;
+        margin-bottom: 32px;
+        padding-bottom: 12px;
+    }
+    .service-detail h1::after {
+        width: 72px;
+        height: 3px;
     }
     .service-detail .service-img {
         max-height: 300px;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
+        border-radius: 10px;
     }
     .service-detail .service-content {
-        padding: 25px;
-        font-size: 0.95rem;
+        padding: 24px;
+        font-size: 1rem;
+        border-radius: 12px;
     }
     .service-detail .service-content h2 {
-        font-size: 1.3rem;
-        margin: 30px 0 15px 0;
+        font-size: 1.5rem;
+        margin: 32px 0 16px;
+        padding-left: 16px;
+    }
+    .service-detail .service-content h2::before {
+        width: 4px;
+        height: 24px;
     }
     .service-detail .service-content h3 {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
+        margin: 24px 0 12px;
+        padding-left: 16px;
+    }
+    .service-detail .service-content p {
+        margin-bottom: 20px;
+        letter-spacing: 0.2px;
+    }
+    .service-detail .service-content p:first-of-type {
+        font-size: 1.05rem;
+        margin-bottom: 24px;
+    }
+    .service-detail .back-btn {
+        margin-top: 32px;
+        padding: 12px 0;
+    }
+    .service-detail .back-btn a {
+        padding: 10px 28px;
+        font-size: 0.85rem;
     }
 }
 
+@media screen and (max-width: 480px) {
+    .service-detail {
+        padding: 24px 12px;
+    }
+    .service-detail h1 {
+        font-size: 1.75rem;
+        margin-bottom: 24px;
+    }
+    .service-detail .service-img {
+        max-height: 200px;
+    }
+    .service-detail .service-content {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+    .service-detail .service-content h2 {
+        font-size: 1.35rem;
+        padding-left: 12px;
+    }
+    .service-detail .service-content h3 {
+        font-size: 1.15rem;
+        padding-left: 12px;
+    }
+    .service-detail .back-btn a {
+        padding: 8px 24px;
+        font-size: 0.8rem;
+    }
+}

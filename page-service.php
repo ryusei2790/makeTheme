@@ -32,7 +32,7 @@ get_header();
                     } else {
                         // サムネイルがない場合の代替画像
                         ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_02.jpg" alt="代替画像">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_2.png" alt="代替画像">
                         <?php
                     }
                     ?>

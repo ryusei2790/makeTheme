@@ -40,12 +40,21 @@
 </section>
 
 <section id="vision" class="scroll-point">
-        <div class="img flipLeftTrigger"></div>
-        <div class="content flipLeftTrigger">
-        <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">principle</span></span></h2>
-        <p class="vision-lead"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">経営理念：</span>挑戦を楽しむ</span></p>
-        </div>
+  <div class="img flipLeftTrigger"></div>
+  <div class="content flipLeftTrigger">
+    <h2>
+      <span class="bgextend bgLRextendTrigger">
+        <span class="bgappearTrigger">Principle</span>
+      </span>
+    </h2>
+    <p class="vision-lead">
+      <span class="bgextend bgLRextendTrigger">
+        <span class="bgappearTrigger">経営理念：挑戦を楽しむ</span>
+      </span>
+    </p>
+  </div>
 </section>
+
     
 <section id="service" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></h2>
@@ -133,12 +142,13 @@
         </li>
         <li>
         <dl>
-            <dt>代表</dt><dd>久保晶幹</dd>
+        <dt>代表</dt><dd>久保晶幹</dd>
+        
         </dl>
         </li>
         <li>
         <dl>
-            <dt>資本金</dt><dd>50万円</dd>
+        <dt>資本金</dt><dd>50万円</dd>
         </dl>
         </li>
         <li>
@@ -150,6 +160,8 @@
         <dl>
             <dt>電話</dt><dd>070-3286-5253</dd>
         </dl>
+        </li>
+       
     </ul>
 </section>
     

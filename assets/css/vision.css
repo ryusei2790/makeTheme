@@ -11,7 +11,7 @@
 #vision .img {
     flex: 1;
     height: 300px;
-    background-image: url('/assets/img/vision.jpg'); /* ここに画像パス */
+    background-image: url('../img/pict_1.png'); /* ここに画像パス */
     background-size: cover;
     background-position: center;
     border-radius: 15px;

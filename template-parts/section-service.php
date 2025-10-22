@@ -3,7 +3,7 @@
 <section id="service" class="scroll-point">
     <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Service</span></span></h2>
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_02.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_2.png" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>Consulting</span>コンサルティング事業</h3>
@@ -14,7 +14,7 @@
     </section>
  
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_03.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_3.png" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>Development</span>受託開発事業</h3>
@@ -25,7 +25,7 @@
     </section>
     
     <section class="service-area flex flex-wrap justify-between">
-    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_04.jpg" alt=""></figure>
+    <figure class="img flipLeftTrigger"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pict_4.png" alt=""></figure>
     <div class="content flipLeftTrigger">
         <div class="content-area">
         <h3><span>Education</span>教育事業</h3>
